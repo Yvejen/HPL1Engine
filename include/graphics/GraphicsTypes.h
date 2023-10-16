@@ -139,6 +139,8 @@ namespace hpl {
 	class cVertex
 	{
 	public:
+        // This overload fixes an error with taking addresses of rvalue-cVertex instances
+        cVertex* operator&() {return this;}
 		cVertex():pos(0),tex(0),col(0){}
 		cVertex(const cVector3f &avPos,const cVector3f &avTex,const cColor &aCol )
 		{

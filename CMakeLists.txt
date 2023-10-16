@@ -4,6 +4,9 @@ project (HPL)
 set(HPL_VERSION_MAJOR 1)
 set(HPL_VERSION_MINOR 0)
 
+set(CMAKE_CXX_FLAGS "-m32")
+set(CMAKE_C_FLAGS "-m32")
+
 include_directories(
 	${CMAKE_CURRENT_SOURCE_DIR}/include
 	${CMAKE_CURRENT_SOURCE_DIR}/../OALWrapper/include

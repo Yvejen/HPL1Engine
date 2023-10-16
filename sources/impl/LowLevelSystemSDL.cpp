@@ -28,7 +28,7 @@
 
 #ifndef WIN32
 // Include FLTK
-#include "FL/fl_ask.H"
+//#include "FL/fl_ask.H"
 #endif
 
 #define _UNICODE
@@ -112,7 +112,7 @@ namespace hpl {
 
 		if(mpFile)
 		{
-			fprintf(mpFile, asMessage.c_str());
+			fprintf(mpFile, "%s",asMessage.c_str());
 			fflush(mpFile);
 		}
 	}
@@ -449,7 +449,7 @@ namespace hpl {
 		sMess += asCaption;
 		sMess +=_W("\n\n");
 		sMess += text;
-		fl_alert("%ls\n\n%ls",asCaption,text);
+		printf("%ls\n\n%ls",asCaption,text);
 		#endif
 	}
 
@@ -632,7 +632,7 @@ namespace hpl {
 	{
 	// Symbolic Links Not Supported under Windows
 	#ifndef WIN32
-		return (symlink(cString::To8Char(asPointsTo).c_str(), cString::To8Char(asLink).c_str()) == 0);
+        return false;
 	#else
 		return false;
 	#endif

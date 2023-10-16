@@ -19,7 +19,8 @@
 #ifndef HPL_LOWLEVELGRAPHICS_SDL_H
 #define HPL_LOWLEVELGRAPHICS_SDL_H
 
-#include <GL/GLee.h>
+#include <GL/glew.h>
+#include <GL/glxew.h>
 
 #include <Cg/cg.h>
 #include <Cg/cgGL.h>

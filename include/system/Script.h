@@ -26,7 +26,7 @@
 	#ifdef __ppc__
 		#define __stdcall
 	#else
-		#define __stdcall __attribute__((stdcall))
+		#define __stdcall
 	#endif
 #endif
 // Script Macros to build Generic wrappers if necessary
@@ -214,7 +214,7 @@
 		GenericScript::funcname##_return+" "#funcname" ("+GenericScript::funcname##_arg+")", (void *)GenericScript::funcname##_Generic, asCALL_GENERIC
 #else
 	#define SCRIPT_REGISTER_FUNC(funcname) \
-		GenericScript::funcname##_return+" "#funcname" ("+GenericScript::funcname##_arg+")", (void *)funcname, asCALL_STDCALL
+		GenericScript::funcname##_return+" "#funcname" ("+GenericScript::funcname##_arg+")", (void *)funcname, asCALL_CDECL
 #endif
 
 namespace hpl {
