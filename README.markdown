@@ -1,17 +1,18 @@
-HPL1 Engine Source Code
+Penumbra Overture Rebuild
 =======================
+This is fork of the original Penumbra Overture and HPL1 Engine code with some modifications to make the game
+playable on modern Linux distributions. The changes include:
+- Updating the OpenGL extension loading mechanism to use glew insteand of the ancient Glee header
+- Updating the anglescript scripting library to version 2.8.1
+- Some minor fixes to make the project build on a modern version of gcc
 
-Yes, here it is at last the Engine that made the Penumbra Series.
+I've also included a binary that should work. Just replace the penumbra.bin in your Steam installation with the new one.
 
-Read through the TODO file for various known things that should be cleaned up / fixed.
-
-Included are project files for Xcode, Visual Studio 2003 and Cmake (for Linux)
-
-Contributing Code
------------------
-We encourage everyone to contribute code to this project, so just sign up for a github account, create a fork and hack away at the codebase. We will start an Open Source forum on the Frictional Games forums as a place to talk about changes and to submit patches from your forks.
-
+Troubleshooting:
+=======================
+- Black Screen: Try disabling anti-aliasing in the settings
+- Audio popping: Try increasing the "StreamUpdateFreq" value in .frictionalgames/Penumbra/Overture/settings.cfg (e.g. 100 seems to work for me)
 
 License Information
 -------------------
-All code is under the GPL Version 3 license except for the "test" which are included under the ZLIB license. All of the assets are licensed under the Creative Commons Attribution Share-Alike 3.0 license except for the CG shaders which are under the ZLIB license.  Please read the COPYING and LICENSE-* files for more information on terms of use.
+All code is under the GPL Version 3 license. Read the COPYING file for terms of use of the license.
